@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aplikasi Kalkulator</title>
+    <style>
+        div {
+          width: 180px;
+          height: 250px;
+          border: 4px solid #575D63;
+          padding: 10px;
+          margin: 20px;
+          background-color: rgb(36, 143, 175);
+        }
+        form {
+            align: center;
+        }
+    </style>
+    <script>
+        function tambah()
+        {
+        a=eval(form.a.value);
+        b=eval(form.b.value);
+        c=eval(form.c.value);
+        n=a+b+c;
+        document.getElementById("hasil").innerHTML = n;
+        }
+
+        function kurang()
+        {
+        a=eval(form.a.value);
+        b=eval(form.b.value);
+        c=eval(form.c.value);
+        n=a-b-c;
+        document.getElementById("hasil").innerHTML = n;
+        }
+
+        function kali()
+        {
+        a=eval(form.a.value);
+        b=eval(form.b.value);
+        c=eval(form.c.value);
+        n=a*b*c;
+        document.getElementById("hasil").innerHTML = n;
+        }
+
+        function bagi()
+        {
+        a=eval(form.a.value);
+        b=eval(form.b.value);
+        c=eval(form.c.value);
+        n=a/b/c;
+        document.getElementById("hasil").innerHTML = n;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <center><h4>KALKULATOR SEDERHANA</h2></center>
+        
+     <form name="form">
+          <table>
+             <tr>
+                <td><input type="number" name="a" min="1"></td>
+             </tr>  
+              <tr>
+                <td><input type="number"  name="b" min="1"></td>
+             </tr> 
+              <tr>               
+                  <td><input type="number" name="c" min="1"></td>
+             </tr>
+              
+             <tr>
+                <td align="center">
+                    <input type="button" value="+" onClick="tambah()">
+                    <input type="button" value="-" onClick="kurang()">
+                    <input type="button" value="x" onClick="kali()">
+                    <input type="button" value="/" onClick="bagi()">
+                    <input type="reset" value="Reset">
+                </td>
+             </tr>
+          </table>
+    </form>
+    <hr>            
+        <b><p style="font-size: 20px;">Hasil: <span id="hasil" style="float: right;"></span></p></b>
+    </div>
+</body>
+</html>
